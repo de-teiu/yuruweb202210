@@ -21,9 +21,13 @@ $ npm run build
 
 ### ローカル環境にDBを構築
 ローカル環境にPostgreSQLをインストールし、以下のデータベースとユーザーを作成する。
+
 データベース名：sample-db
+
 ユーザー名：sample-user
+
 ユーザーパスワード：sample
+
 
 
 ### Spring Bootでローカルサーバー起動
