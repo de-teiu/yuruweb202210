@@ -28,7 +28,12 @@ $ npm run build
 
 ユーザーパスワード：sample
 
+### A5:SQL Mk-2でテーブルを作成
+(A5:SQL Mk-2の細かい使い方は省略)
 
+A5:SQL Mk-2で/document/ER図.a5er を開き、sample-dbにテーブルを追加
+
+public.role_master.sql,public.user_master.sql,public.user_role_master.sqlのSQLを実行し、テストデータを追加
 
 ### Spring Bootでローカルサーバー起動
 適当なJavaの開発環境(Eclipse等)を用意し、プロジェクトをビルドしてローカルサーバーを起動。
