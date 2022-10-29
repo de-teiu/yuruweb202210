@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
