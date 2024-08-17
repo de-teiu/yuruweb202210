@@ -15,6 +15,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
-    "jquery": "^3.6.1"
+    "jquery": "^3.6.1",
+    "tabulator-tables": "^6.2.5"
   }
 }

@@ -19,11 +19,20 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-		http.formLogin(login -> login.loginProcessingUrl("/login").loginPage("/login").defaultSuccessUrl("/")
-				.failureUrl("/login?error").permitAll()).logout(logout -> logout.logoutSuccessUrl("/logout"))
-				.authorizeHttpRequests(authz -> authz.mvcMatchers("/").permitAll().mvcMatchers("/static/**").permitAll()
-						.mvcMatchers("/logout").permitAll().mvcMatchers("/general").hasRole("GENERAL")
-						.mvcMatchers("/admin").hasRole("ADMIN").anyRequest().authenticated());
+		http.formLogin(login -> login
+				.loginProcessingUrl("/login")
+				.loginPage("/login")
+				.defaultSuccessUrl("/")
+				.failureUrl("/login?error").permitAll())
+				.logout(logout -> logout.logoutSuccessUrl("/"))
+				.authorizeHttpRequests(authz -> authz
+						.mvcMatchers("/").permitAll()
+						.mvcMatchers("/static/**").permitAll()
+						.mvcMatchers("/logout").permitAll()
+						.mvcMatchers("/general/**").hasRole("GENERAL")
+						.mvcMatchers("/admin/**").hasRole("ADMIN")
+						.anyRequest().authenticated());
+		http.csrf().disable();
 		return http.build();
 	}
 

@@ -17,6 +17,9 @@ const pageData = {
   "/templates/admin/mypage.html": {
     title: "管理者ユーザーマイページ",
   },
+  "/templates/admin/master/user.html": {
+    title: "ユーザー管理",
+  },
 };
 
 export default defineConfig({
@@ -29,12 +32,14 @@ export default defineConfig({
         main: resolve(__dirname, "src/templates/index.html"),
         general: resolve(__dirname, "src/templates/general/mypage.html"),
         admin: resolve(__dirname, "src/templates/admin/mypage.html"),
+        userMaster: resolve(__dirname, "src/templates/admin/master/user.html"),
       },
     },
   },
   resolve: {
     alias: {
       "~bootstrap": resolve(__dirname, "node_modules/bootstrap"),
+      "~tabulator": resolve(__dirname, "node_modules/tabulator-tables"),
     },
   },
   server: {

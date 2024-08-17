@@ -37,6 +37,11 @@
       <property name="useActualColumnNames" value="false" />
       <property name="ignoreQualifiersAtRuntime" value="true"/>
     </table>
+    <table schema="public" tableName="user_master" delimitIdentifiers="true" delimitAllColumns="true">
+      <property name="useActualColumnNames" value="false" />
+      <property name="ignoreQualifiersAtRuntime" value="true"/>
+      <generatedKey column="id" sqlStatement="JDBC" identity="true"/>
+    </table>
 
   </context>
 </generatorConfiguration>
