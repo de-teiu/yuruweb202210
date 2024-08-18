@@ -36,11 +36,20 @@ const addUser = async () => {
   const name = document.getElementById("name").value;
   const mail = document.getElementById("mail").value;
   const password = document.getElementById("password").value;
+
+  const token = document
+    .querySelector("meta[name='_csrf']")
+    .getAttribute("content");
+  const header = document
+    .querySelector("meta[name='_csrf_header']")
+    .getAttribute("content");
+
   const res = fetch("/admin/master/user/add", {
     method: "POST",
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
+      [header]: token,
     },
     body: JSON.stringify({ name, mail, password }),
   })

@@ -32,7 +32,7 @@ public class SecurityConfig {
 						.mvcMatchers("/general/**").hasRole("GENERAL")
 						.mvcMatchers("/admin/**").hasRole("ADMIN")
 						.anyRequest().authenticated());
-		http.csrf().disable();
+
 		return http.build();
 	}
 
